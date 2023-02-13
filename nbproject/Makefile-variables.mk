@@ -6,8 +6,8 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Eiskalter_Torjubel.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Eiskalter_Torjubel.X.production.hex
+CND_ARTIFACT_NAME_default=Eiskalter_Torjubel.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/Eiskalter_Torjubel.production.hex
 CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
-CND_PACKAGE_NAME_default=eiskaltertorjubel.x.tar
-CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/eiskaltertorjubel.x.tar
+CND_PACKAGE_NAME_default=eiskaltertorjubel.tar
+CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/eiskaltertorjubel.tar
