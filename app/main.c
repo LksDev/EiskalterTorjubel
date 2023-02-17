@@ -1,24 +1,43 @@
 /*
  * File:   main.c
- * Author: Lukas
+ * Author: LksDev
  *
  * Created on 13. Februar 2023, 18:29
  */
 
 
-#include <xc.h>
 #include "main.h"
 
 void main(void) {
     
     initIO();
+    initEUSART();
+    
+    
+    // Interrupt enable
+    //INTCON |= 0xD2;         //Global-/Peripherie & INT External Interrupt enable
+    INTCONbits.IOCIE    = 0;
+    INTCONbits.INTE     = 1;
+    INTCONbits.PEIE     = 1;
+    INTCONbits.GIE      = 1;
+    INTCONbits.PEIE     = 1;
+    
+    char data[10] = { 65, 66, 67, 68, 69, 
+                      70, 71 ,72, 73, 74, 
+                    };
+    
+    
     while(1){
-        for(int i=0; i<10; i++){
-        PORTCbits.RC0 = 1;
-        __delay_ms(500);
-        PORTCbits.RC0 = 0;
-        __delay_ms(500);    
+        
+        
+        for(int i=0; i<5; i++){          
+            PORTCbits.RC0 = 1;
+            sendChar(data[i]);
+            // __delay_ms(500);
+            PORTCbits.RC0 = 0;
+            // __delay_ms(500);    
         }
+        __delay_ms(2000);
     }
     return;
 }
