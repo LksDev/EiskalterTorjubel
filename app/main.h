@@ -18,6 +18,8 @@ extern "C" {
 #include "dfplayer.h"
 
 void initIO(void);
+void initINT(void);
+void interrupt ISR_PORTA(void);
 
 #ifdef	__cplusplus
 }
